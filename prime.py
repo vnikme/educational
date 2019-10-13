@@ -65,11 +65,17 @@ def test():
     return True
 
 
+def check_and_print(n):
+    print('{}: {}'.format(n, is_prime(n)))
+
+
 def main():
     test()
-    print('{}: {}'.format(12345678910987654321, is_prime(12345678910987654321)))
-    print('{}: {}'.format(1000000000000066600000000000001, is_prime(1000000000000066600000000000001)))
-
+    check_and_print(12345678910987654321)
+    check_and_print(1000000000000066600000000000001)
+    check_and_print(12345678910987654321 + 12)
+    check_and_print(1000000000000066600000000000001 + 12)
+    check_and_print(2**521-1)
 
 if __name__ == "__main__":
     main()
